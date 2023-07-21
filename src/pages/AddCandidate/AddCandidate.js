@@ -143,7 +143,8 @@ const AddCandidate = () => {
     }
   };
   return (
-    <div style={{width:'100%',height:'auto',backgroundColor:'#e9ecef',paddingBottom:'92px',paddingTop:'1px'}}>
+    <div id='addCandidates'>
+          <div style={{width:'100%',height:'auto',backgroundColor:'#e9ecef',paddingBottom:'92px',paddingTop:'1px'}}>
         <div className="outer-wrapper"  >
         <div className="table-wrapper">
           <div className='container-search'>
@@ -208,7 +209,7 @@ const AddCandidate = () => {
           </div>
         </div>
         {isSidebarOpen && selectedPerson && (
-          <div className='container'>
+          <div className='container1'>
             <div className="container-main" ref={sidebarRef}>
               <div className='containerAvatar'>
                 
@@ -282,6 +283,7 @@ const AddCandidate = () => {
           </div>
         </div>
       )}
+    </div>
     </div>
     </div>
   );

@@ -1,22 +1,24 @@
 
+
 .outer-wrapper{
     width: 90%;
     background-color: white;
     border: 5px solid white;
     margin:55px 0px 0px 70px;
-    border-radius: 30px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     .searchItem{
-  
+      
       height: 30px;
       text-align: center;
-      border-radius: 20px;
+      border-radius: 10px;
+      border: 1px solid #81807f;
     }
 }
 .table-wrapper{
-    height: 500px;
-    overflow-y: scroll;
+    height: 600px;
+    // overflow-y: scroll;
     margin: 20px;
 }
 .table-wrapper::-webkit-scrollbar {
@@ -29,11 +31,11 @@
     background-color: white;
     border: 5px solid white;
     margin:55px 0px 0px 40px;
-    border-radius: 30px;
+    border-radius: 10px;
     .table-wrapper{
     
     height: 500px;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     margin: 20px;
 }
 }
@@ -51,12 +53,12 @@
     border-collapse: collapse; /* Don't collapse */
     border-spacing: 0;
     width: 100%;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     
   }
 
   #candidates td{
-    border: 5px solid #ddd;
+    // border: 5px solid #ddd;
     padding: 18px 18px 18px 18px;
     .avatar-img{
       
@@ -72,7 +74,7 @@
     // position: -webkit-sticky;
     // position: sticky;
     // top: 0px;
-    border: 5px solid #ddd;
+    // border: 5px solid #ddd;
     padding: 18px;
     
     padding-top: 12px;
@@ -101,13 +103,40 @@
     background-color: #00A3FF;
   }
   
-  .container{
+ 
+
+  @media only screen and (max-width: 900px) {
+    .container{
+      width: 55%;
+      left: 200px;
+      right: 150px;
+    }
+  }
+  .edit-button{
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    color: white;
+    background-color: #00A3FF;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+  }
+  .edit-button:hover{
+    color:black;
+    background-color: white;
+    border: 1px solid #00A3FF;
+
+  }
+
+  .container-table{
     position: fixed;
     width: 100%;
     height: 100%;
     bottom: 0px;
-    left: 0px;
+    left: 0%;
     background-color: rgba(68, 68, 83, 0.5); 
+    display: flex;
     .container-main{
       position: fixed;
       display: flex;
@@ -247,28 +276,8 @@
       }
     }
   }
-  
-
-  @media only screen and (max-width: 900px) {
-    .container{
-      width: 55%;
-      left: 200px;
-      right: 150px;
-    }
-  }
-  .edit-button{
+ .pagination{
     width: 100%;
-    height: 30px;
-    border-radius: 20px;
-    color: white;
-    background-color: #00A3FF;
-    border: none;
-    margin: auto;
-    cursor: pointer;
-  }
-  .edit-button:hover{
-    color:black;
-    background-color: white;
-    border: 1px solid #00A3FF;
-
-  }
+    text-align: center;
+    height: 40px;
+ }

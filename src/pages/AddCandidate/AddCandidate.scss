@@ -1,4 +1,5 @@
-.outer-wrapper {
+#addCandidates{
+  .outer-wrapper {
     width: 90%;
     background-color: white;
     border: 5px solid white;
@@ -142,7 +143,7 @@
     background-color: #00A3FF;
   }
   
-  .container {
+  .container1 {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -327,3 +328,4 @@
     border: 1px solid #00A3FF;
   
   }
+}

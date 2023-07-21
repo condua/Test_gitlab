@@ -16,12 +16,15 @@ import IRASidebar from "../components/IRALayout/IRASidebar"
 import IRAHero from "../components/IRALayout/IRAHero"
 import IRABanner from "../components/IRALayout/IRABanner"
 import IRAFooter from "../components/IRALayout/IRAFooter"
+const token = localStorage.getItem("token")
 
 const items = [
-    { key: "/", icon: <HomeOutlined />, label: "Home" },
+    { key: "/", icon: <HomeOutlined />, label: "HomeInterviewer" },
     { type: "divider" },
     { key: "/event", icon: <FireOutlined />, label: "Event" },
     { key: "/interview", icon: <VideoCameraOutlined />, label: "Interview" },
+    { key: "/table", icon: <FileSearchOutlined />, label: "Table" },
+
     { key: "/recruitment", icon: <FileSearchOutlined />, label: "Recruitment" },
     // { key: "/login", icon: <FileSearchOutlined />, label: "Login" },
     // { key: "/register", icon: <FileSearchOutlined />, label: "Register" },
@@ -42,25 +45,34 @@ const IRALayout = ({ collapsed, SetCollapsed, children }) => {
     let href = window.location.href.substring(window.location.origin.length + 1)
 
     return (
-        <Layout className="bg-[#E9ECEF]">
-            <IRASidebar
-                collapsed={collapsed}
-                SetCollapsed={SetCollapsed}
-                items={items}
-                href={href}
-                navigate={navigate}
-            />
-            <Layout
-                className={
-                    "bg-[#E9ECEF] transition-all " +
-                    (collapsed ? " ml-24" : "ml-[250px]")
-                }
-            >
-                <IRAHeader colorBgContainer={colorBgContainer} />
-                <IRAHero />
-                <IRAContent>{children}</IRAContent>
-            </Layout>
-        </Layout>
+        <div>
+            {token == "true"
+                ?
+                <Layout className="bg-[#E9ECEF]">
+                    <IRASidebar
+                        collapsed={collapsed}
+                        SetCollapsed={SetCollapsed}
+                        items={items}
+                        href={href}
+                        navigate={navigate}
+                    />
+                    <Layout
+                        className={
+                            "bg-[#E9ECEF] transition-all " +
+                            (collapsed ? " ml-24" : "ml-[250px]")
+                        }
+                    >
+                        <IRAHeader colorBgContainer={colorBgContainer} />
+                        <IRAHero />
+                        <IRAContent>{children}</IRAContent>
+
+                    </Layout>
+                </Layout>
+
+                :
+                <div></div>
+            }
+        </div>
     )
 }
 

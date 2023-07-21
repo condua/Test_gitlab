@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^5.1.4",
     "@editorjs/editorjs": "^2.27.2",
     "@editorjs/header": "^2.7.0",
     "@editorjs/paragraph": "^2.9.0",
@@ -12,7 +13,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "antd": "^5.6.4",
+    "antd": "^5.7.1",
     "axios": "^1.4.0",
     "font-awesome": "^4.7.0",
     "framer-motion": "^10.12.18",
@@ -25,12 +26,13 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-quill": "^2.0.0",
     "react-redux": "^8.1.1",
-    "react-router-dom": "^6.14.1",
+    "react-router-dom": "^6.14.2",
     "react-scripts": "5.0.1",
     "recharts": "^2.7.2",
     "redux": "^4.2.1",
     "redux-saga": "^1.2.3",
     "sass": "^1.63.6",
+    "scss": "^0.2.4",
     "tailwind-scrollbar": "^3.0.4",
     "web-vitals": "^2.1.4"
   },
@@ -61,6 +63,6 @@
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.3"
   }
 }

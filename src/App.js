@@ -49,9 +49,11 @@ const App = (props) => {
     return (
             
             <Router>
-                {/* <Routes>
+                <Routes>
                     <Route path="/login" element={<Login />} />
-                </Routes> */}
+                    <Route path="/register" element={<Register/>}/>
+
+                </Routes>
 
                 <IRALayout>
                     <Routes>         
@@ -60,41 +62,41 @@ const App = (props) => {
                         <Route path="/register" element={<Register/>}/>
                         <Route path="*" element={<Navigate to="/login" />} /> */}
 
-                        <Route  element = {<PrivateRoute/>}>
-                        <Route path="*" element={<Navigate to="/home" />} />
-                        <Route path="/home" element={<Home/>} exact/>
-                        <Route path="/table" element={<Table/>}/>
+                            <Route  element = {<PrivateRoute/>}>
+                            <Route path="*" element={<Navigate to="/home" />} />
+                            <Route path="/home" element={<Home/>} exact/>
+                            <Route path="/table" element={<Table/>}/>
 
-                        <Route path="/:id" element={<Edit/>}/>
+                            <Route path="/:id" element={<Edit/>}/>
+                            <Route path="/event" element={<Event />}/>
+                            <Route path="/event/:id" element={<EventDetail />}/>
+                            <Route path="/event/edit/:id" element={<EventEdit />}/>
+                            <Route path="/event/add" element={<EventAdd />}/>
+                            
+                            <Route path="/interview" element={<InterviewMain />} />
+                            <Route path="/interview/detail/:id" element={<InterviewDetail />} />
+                            <Route path="/interview/detail/:id/:mark_id" element={<InterviewMark />} />
+                            <Route path="/questions" element={<Questions />} />
+                            <Route path="/interviewercalendar" element={<InterviewerCalendar />}/>
+
+                            <Route path="/recruitment" element={<Recruitment />} />
+                            <Route path="/recruitment/add" element={<RecruitAdd />} />
+                            <Route path="/recruitment/edit/:id" element={<RecruitEdit />} />
+                            <Route path='manage-user' element={<ManageUser />} />
+                            <Route path='detail-user/:id' element={<DetailUser />} />
+                            <Route path='manage-candidate' element={< ManageCandidate />} />
+                            <Route path="blacklist" element={< BlackList />} />
+                            <Route path="reason-blacklist/:id" element={< ReasonBlacklist />} />
+                            <Route path="detail-blacklist/:id" element={< DetailBlacklist />} />
+                        {/* /* <Route path='/interviewers' element={<Table />} /> */ }
+                            <Route path='/interviewers/:id' element={<InterviewInfo />} />
+                            <Route path='/room' element={<Room/>} />
+                            <Route path='/room/:id' element={<RoomDetail />} />
+                            <Route path='/room/:id/candidate' element={<AddCandidate />} />
+                            <Route path='/room/:id/candidate/interviewerassign' element={<AddInterviewer/>} />
+                            <Route path='/room/:id' element={<RoomEdit />} />
+                            <Route path='/room/create' element={<RoomAdd />} />
                         </Route>           
-                        <Route path="/event" element={<Event />}/>
-                        <Route path="/event/:id" element={<EventDetail />}/>
-                        <Route path="/event/edit/:id" element={<EventEdit />}/>
-                        <Route path="/event/add" element={<EventAdd />}/>
-                        
-                        <Route path="/interview" element={<InterviewMain />} />
-                        <Route path="/interview/detail/:id" element={<InterviewDetail />} />
-                        <Route path="/interview/detail/:id/:mark_id" element={<InterviewMark />} />
-                        <Route path="/questions" element={<Questions />} />
-                        <Route path="/interviewercalendar" element={<InterviewerCalendar />}/>
-
-                        <Route path="/recruitment" element={<Recruitment />} />
-                        <Route path="/recruitment/add" element={<RecruitAdd />} />
-                        <Route path="/recruitment/edit/:id" element={<RecruitEdit />} />
-                        <Route path='manage-user' element={<ManageUser />} />
-                        <Route path='detail-user/:id' element={<DetailUser />} />
-                        <Route path='manage-candidate' element={< ManageCandidate />} />
-                        <Route path="blacklist" element={< BlackList />} />
-                        <Route path="reason-blacklist/:id" element={< ReasonBlacklist />} />
-                        <Route path="detail-blacklist/:id" element={< DetailBlacklist />} />
-                    {/* /* <Route path='/interviewers' element={<Table />} /> */ }
-                        <Route path='/interviewers/:id' element={<InterviewInfo />} />
-                        <Route path='/room' element={<Room/>} />
-                        <Route path='/room/:id' element={<RoomDetail />} />
-                        <Route path='/room/:id/candidate' element={<AddCandidate />} />
-                        <Route path='/room/:id/candidate/interviewerassign' element={<AddInterviewer/>} />
-                        <Route path='/room/:id' element={<RoomEdit />} />
-                        <Route path='/room/create' element={<RoomAdd />} />
 
                     </Routes>
                 </IRALayout>
